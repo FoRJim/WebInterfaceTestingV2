@@ -5,7 +5,7 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-//import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class CardOrderTest {
     private WebDriver driver;
@@ -18,12 +18,12 @@ public class CardOrderTest {
     }
     @BeforeEach
     void setUp() {
-        //ChromeOptions options = new ChromeOptions();
-        //options.addArguments("--disable-dev-shm-usage");
-        //options.addArguments("--no-sandbox");
-        //options.addArguments("--headless");
-        //driver = new ChromeDriver(options);
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
+        driver = new ChromeDriver(options);
+        //driver = new ChromeDriver();
 
     }
 
