@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class CardOrderTest {
     private WebDriver driver;
 
@@ -18,12 +20,12 @@ public class CardOrderTest {
     }
     @BeforeEach
     void setUp() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--headless");
-        driver = new ChromeDriver(options);
-        //driver = new ChromeDriver();
+        //ChromeOptions options = new ChromeOptions();
+        //options.addArguments("--disable-dev-shm-usage");
+        //options.addArguments("--no-sandbox");
+        //options.addArguments("--headless");
+        //driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
 
     }
 
@@ -44,7 +46,7 @@ public class CardOrderTest {
         String expected = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
         String actual = driver.findElement (By.cssSelector("[data-test-id=order-success]")).getText().trim();
 
-        Assertions.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
 
