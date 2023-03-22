@@ -1,0 +1,1 @@
+# Project status [![Build status](https://ci.appveyor.com/api/projects/status/2t05l849e8x3icbn/branch/main?svg=true)](https://ci.appveyor.com/project/FoRJim/webinterfacetestingv2/branch/main)
