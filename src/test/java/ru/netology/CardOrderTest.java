@@ -41,7 +41,6 @@ public class CardOrderTest {
 
     @Test
     void shouldTestSomething(){
-        driver.get("https://www.google.com/");
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("[data-test-id=name] input")).sendKeys("Кузнецов Василий");
         driver.findElement(By.cssSelector("[data-test-id=phone] input")).sendKeys("+79114865807");
